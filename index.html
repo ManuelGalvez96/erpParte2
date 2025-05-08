@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trabajo ERP Odoo 16 - Inventario y Facturación</title>
+  <link rel="stylesheet" href="./estilo/estilo.css">
+</head>
+<body>
+
+  <h1>Implementación de Odoo 16 Community - Módulos: Inventario y Facturación</h1>
+
+  <h2>1. Guía de instalación y configuración básica de Odoo 16</h2>
+  <p>Se ha instalado Odoo 16 Community en una máquina virtual Ubuntu 22.04. La base de datos se ha nombrado como <strong>db_NombreAlumno</strong> y se ha marcado la opción de “demo data”.</p>
+  <ol>
+    <li>Tener conexión a Internet</li>
+    <li>Descargar Odoo 16 desde <a href="https://www.odoo.com/es_ES/page/download">sitio oficial</a></li>
+    <li>Ejecutar el .EXE para instalar Odoo y los complementos de PostrgreSQL y Odoo Server, los cuales vendran marcados por defecto</li>
+    <img src="./img/Captura de pantalla 2025-05-05 120201.png">
+    <img src="./img/Captura_de_pantalla_2025-05-05_032142.png">
+    
+    <li>Anotar la informacion mostrada en la imagen: </li>
+    <img src="./img/Captura de pantalla 2025-05-05 115905.png">
+    <li>Acceder vía navegador: <a href="http://localhost:8069">http://localhost:8069</a></li>
+  </ol>
+
+  <h2>2. Módulos seleccionados</h2>
+
+  <div class="modulo">
+    <h3>Módulo 1: Inventario</h3>
+    <p><strong>Justificación:</strong> El módulo de Inventario es esencial para la gestión eficiente de productos, lotes, ubicaciones y movimientos dentro de una PYME.</p>
+    <p><strong>Instalación:</strong> Desde el panel de “Aplicaciones”, buscar “Inventario” e instalar.</p>
+    <p><strong>Funcionamiento:</strong></p>
+    <ul>
+      <li>Permite dar de alta productos y configurarlos como almacenables o consumibles.</li>
+      <li>Gestión de ubicaciones internas, proveedores y rutas logísticas.</li>
+      <li>Creación de órdenes de recepción y envíos.</li>
+      <li>Seguimiento de movimientos de stock en tiempo real.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong> Para dar de alta un producto: Inventario &gt; Productos &gt; Crear &gt; Rellenar nombre, tipo, precio, etc.</p>
+    <p>Imagenes Complementarias:</p>
+    <img src="./img/Captura_de_pantalla_2025-05-05_033728.png">
+    <img src="./img/Captura_de_pantalla_2025-05-05_034916.png">
+    <img src="./img/Captura_de_pantalla_2025-05-05_034939.png">
+    <img src="./img/Captura_de_pantalla_2025-05-05_034948.png">
+    <img src="./img/Captura_de_pantalla_2025-05-05_034957.png">
+  </div>
+
+  <div class="modulo">
+    <h3>Módulo 2: Facturación</h3>
+    <p><strong>Justificación:</strong> La facturación automatizada es clave para mantener una contabilidad ordenada y cumplir con obligaciones fiscales.</p>
+    <p><strong>Instalación:</strong> Desde el panel de “Aplicaciones”, buscar “Facturación” e instalar.</p>
+    <p><strong>Funcionamiento:</strong></p>
+    <ul>
+      <li>Permite emitir facturas de venta y gestionar facturas de proveedor.</li>
+      <li>Integración con contabilidad para conciliación bancaria.</li>
+      <li>Generación de informes de impuestos y cuentas pendientes.</li>
+      <li>Automatización de recordatorios de pago y facturación recurrente.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong> Para emitir una factura: Facturación &gt; Clientes &gt; Facturas &gt; Crear.</p>
+    <p>Imagenes Complementarias: </p>
+    <img src="./img/Captura de pantalla 2025-05-06 133158.png">
+    <img src="./img/Captura de pantalla 2025-05-06 134029.png">
+    <img src="./img/Captura de pantalla 2025-05-06 134236.png">
+    <img src="./img/Captura de pantalla 2025-05-06 134258.png">
+    <img src="./img/Captura de pantalla 2025-05-06 134348.png">
+  </div>
+
+  <h2>3. Copia de seguridad y restauración de la base de datos</h2>
+  <p>Una vez instalados los módulos, se realizó una copia de seguridad de la base de datos:</p>
+  <ol>
+    <li>Acceder a <a href="http://localhost:8069/web/database/manager">Database Manager</a></li>
+    <li>Seleccionar la base de datos <strong>db_NombreAlumno</strong></li>
+    <li>Hacer clic en “Backup” y guardar el archivo .zip generado.</li>
+  </ol>
+  <p>Para restaurar:</p>
+  <ol>
+    <li>En el ERP del compañero, acceder al mismo gestor de bases de datos.</li>
+    <li>Hacer clic en “Restore”, subir el archivo .zip e introducir el master password.</li>
+    <li>Verificar que los módulos, datos demo y configuraciones se restauraron correctamente.</li>
+  </ol>
+  <p><strong>Efectos:</strong> Toda la configuración, usuarios, módulos y datos fueron restaurados en el entorno del compañero, replicando el estado original.</p>
+  <p>Imagenes Complementarias:</p>
+  <img src="./img/Captura_de_pantalla_2025-05-08_113418.png">
+  <img src="./img/Captura_de_pantalla_2025-05-08_123031.png">
+  <img src="./img/Captura_de_pantalla_2025-05-08_123120.png">
+  <img src="./img/Captura de pantalla 2025-05-08 123532.png">
+
+  <h2>4. Conclusiones</h2>
+  <ul>
+    <li>Odoo es una herramienta potente y flexible para la gestión empresarial de una PYME.</li>
+    <li>El módulo de Inventario facilita la organización de stock y logística.</li>
+    <li>El módulo de Facturación automatiza la gestión de pagos y cobros.</li>
+    <li>La copia de seguridad permite una portabilidad rápida del sistema entre diferentes equipos.</li>
+  </ul>
+
+</body>
+</html>
